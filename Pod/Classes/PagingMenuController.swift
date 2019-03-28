@@ -40,8 +40,8 @@ open class PagingMenuController: UIViewController {
             
             pagingViewController.contentScrollView.delegate = self
             view.addSubview(pagingViewController.view)
-            addChildViewController(pagingViewController)
-            pagingViewController.didMove(toParentViewController: self)
+            addChild(pagingViewController)
+            pagingViewController.didMove(toParent: self)
         }
     }
     public var onMove: ((MenuMoveState) -> Void)? {
@@ -63,10 +63,11 @@ open class PagingMenuController: UIViewController {
     
     // MARK: - Lifecycle
     
-    public init(options: PagingMenuControllerCustomizable) {
+    public init(options: PagingMenuControllerCustomizable? = nil) {
         super.init(nibName: nil, bundle: nil)
-        
-        setup(options)
+        if let options = options {
+            setup(options)
+        }
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -233,10 +234,12 @@ open class PagingMenuController: UIViewController {
         
         // H:|[menuView]|
         // V:[menuView(height)]
+        let heightLC = menuView.heightAnchor.constraint(equalToConstant: height)
+        heightLC.priority = UILayoutPriority.defaultHigh
         NSLayoutConstraint.activate([
             menuView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             menuView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            menuView.heightAnchor.constraint(equalToConstant: height)
+            heightLC
             ])
         
         menuView.setNeedsLayout()
@@ -323,7 +326,9 @@ extension PagingMenuController: UIScrollViewDelegate {
         default: return
         }
         
-        move(toPage: nextPage)
+        if scrollView == pagingViewController?.contentScrollView {
+            move(toPage: nextPage)
+        }
     }
 
     public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
@@ -509,13 +514,13 @@ extension PagingMenuController {
         
         let newPage: Int
         switch (recognizer.direction, menuOptions.displayMode) {
-        case (UISwipeGestureRecognizerDirection.left, .infinite):
+        case (UISwipeGestureRecognizer.Direction.left, .infinite):
             newPage = menuView.nextPage
-        case (UISwipeGestureRecognizerDirection.left, _):
+        case (UISwipeGestureRecognizer.Direction.left, _):
             newPage = min(nextPage, menuOptions.itemsOptions.count - 1)
-        case (UISwipeGestureRecognizerDirection.right, .infinite):
+        case (UISwipeGestureRecognizer.Direction.right, .infinite):
             newPage = menuView.previousPage
-        case (UISwipeGestureRecognizerDirection.right, _):
+        case (UISwipeGestureRecognizer.Direction.right, _):
             newPage = max(previousPage, 0)
         default: return
         }
@@ -525,7 +530,7 @@ extension PagingMenuController {
 }
 
 extension PagingMenuController {
-    func cleanup() {
+    open func cleanup() {
         if let menuView = self.menuView {
             menuView.cleanup()
             menuView.removeFromSuperview()
@@ -533,8 +538,8 @@ extension PagingMenuController {
         if let pagingViewController = self.pagingViewController {
             pagingViewController.cleanup()
             pagingViewController.view.removeFromSuperview()
-            pagingViewController.removeFromParentViewController()
-            pagingViewController.willMove(toParentViewController: nil)
+            pagingViewController.removeFromParent()
+            pagingViewController.willMove(toParent: nil)
         }
     }
 }
