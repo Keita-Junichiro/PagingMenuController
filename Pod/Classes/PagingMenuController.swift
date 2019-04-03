@@ -188,7 +188,6 @@ open class PagingMenuController: UIViewController {
 
             // show paging views
             self?.showPagingMenuControllers()
-
             self?.onMove?(.didMoveController(to: nextPagingViewController, from: previousPagingViewController))
         }
         if duration > 0 {
@@ -200,6 +199,9 @@ open class PagingMenuController: UIViewController {
     }
     
     // MARK: - Constructor
+    public func reloadMenuView() {
+        menuView?.menuItemViews.forEach { $0.isSelected = $0.isSelected }
+    }
     
     fileprivate func constructMenuView() {
         guard let menuOptions = self.menuOptions else { return }

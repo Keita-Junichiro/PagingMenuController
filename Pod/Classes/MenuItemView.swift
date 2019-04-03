@@ -161,12 +161,12 @@ open class MenuItemView: UIView {
     }
     
     fileprivate func setupLabel(_ label: UILabel, text: MenuItemText) {
-        label.text = text.text
         updateLabel(label, text: text)
         addSubview(label)
     }
     
     fileprivate func updateLabel(_ label: UILabel, text: MenuItemText) {
+        label.text = text.text
         label.textColor = isSelected ? text.selectedColor : text.color
         label.font = isSelected ? text.selectedFont : text.font
     }
@@ -208,7 +208,7 @@ open class MenuItemView: UIView {
             titleLabel.heightAnchor.constraint(equalToConstant: titleLabelSize.height),
             ])
     }
-
+    
     fileprivate func layoutLabel() {
         // H:|[titleLabel](==labelSize.width)|
         // V:|[titleLabel]|
