@@ -494,8 +494,8 @@ extension PagingMenuController {
         
         let newPage: Int
         switch menuOptions.displayMode {
-        case .standard(_, _, .pagingEnabled):
-            newPage = page < currentPage ? menuView.currentPage - 1 : menuView.currentPage + 1
+//         case .standard(_, _, .pagingEnabled):
+//             newPage = page < currentPage ? menuView.currentPage - 1 : menuView.currentPage + 1
         case .infinite(_, .pagingEnabled):
             if menuItemView.frame.midX > menuView.currentMenuItemView.frame.midX {
                 newPage = menuView.nextPage
