@@ -3,10 +3,10 @@
     "pins": [
       {
         "package": "PagingMenuController",
-        "repositoryURL": "/Users/lamnd/Projects/Github/PagingMenuController",
+        "repositoryURL": "https://github.com/lamnd91/PagingMenuController",
         "state": {
           "branch": "spm",
-          "revision": "f0caf0ac29444100d3a681bbf6ab26f439f9abd8",
+          "revision": "0e39191c3ac50e99a7c08c9a4b359341576b4366",
           "version": null
         }
       }

@@ -18,8 +18,8 @@
 		707C61031AFF843F00BDAB0B /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707C61021AFF843F00BDAB0B /* RepositoriesViewController.swift */; };
 		707C61051AFF845200BDAB0B /* GistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707C61041AFF845200BDAB0B /* GistsViewController.swift */; };
 		707C61071AFF846800BDAB0B /* OrganizationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707C61061AFF846800BDAB0B /* OrganizationsViewController.swift */; };
-		8D96D380252ECD5800DFD5DB /* PagingMenuController in Frameworks */ = {isa = PBXBuildFile; productRef = 8D96D37F252ECD5800DFD5DB /* PagingMenuController */; };
-		8D96D382252ECD6200DFD5DB /* PagingMenuController in Frameworks */ = {isa = PBXBuildFile; productRef = 8D96D381252ECD6200DFD5DB /* PagingMenuController */; };
+		8D96D38E252ED3F400DFD5DB /* PagingMenuController in Frameworks */ = {isa = PBXBuildFile; productRef = 8D96D38D252ED3F400DFD5DB /* PagingMenuController */; };
+		8D96D390252ED3FD00DFD5DB /* PagingMenuController in Frameworks */ = {isa = PBXBuildFile; productRef = 8D96D38F252ED3FD00DFD5DB /* PagingMenuController */; };
 		B50B36C1B3DC846362BC2BCC /* Pods_PagingMenuControllerDemo2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7502E520266C60B11B332CB2 /* Pods_PagingMenuControllerDemo2.framework */; };
 		EC0DC7D31D090B1B00857E1F /* PagingMenuControllerOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0DC7D21D090B1B00857E1F /* PagingMenuControllerOptions.swift */; };
 		EC48B6AB1CEC3DD6004C0E3D /* MenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC48B6AA1CEC3DD6004C0E3D /* MenuViewController.storyboard */; };
@@ -86,7 +86,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A4915476E84149DEF5F6C4F /* Pods_PagingMenuControllerDemo.framework in Frameworks */,
-				8D96D380252ECD5800DFD5DB /* PagingMenuController in Frameworks */,
+				8D96D38E252ED3F400DFD5DB /* PagingMenuController in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +95,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B50B36C1B3DC846362BC2BCC /* Pods_PagingMenuControllerDemo2.framework in Frameworks */,
-				8D96D382252ECD6200DFD5DB /* PagingMenuController in Frameworks */,
+				8D96D390252ED3FD00DFD5DB /* PagingMenuController in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,7 +215,7 @@
 			);
 			name = PagingMenuControllerDemo;
 			packageProductDependencies = (
-				8D96D37F252ECD5800DFD5DB /* PagingMenuController */,
+				8D96D38D252ED3F400DFD5DB /* PagingMenuController */,
 			);
 			productName = PagingMenuControllerDemo;
 			productReference = 707C60DB1AFF822100BDAB0B /* PagingMenuControllerDemo.app */;
@@ -236,7 +236,7 @@
 			);
 			name = PagingMenuControllerDemo2;
 			packageProductDependencies = (
-				8D96D381252ECD6200DFD5DB /* PagingMenuController */,
+				8D96D38F252ED3FD00DFD5DB /* PagingMenuController */,
 			);
 			productName = PagingMenuControllerDemo2;
 			productReference = EC7BA3F71B524BB4007FB8A5 /* PagingMenuControllerDemo2.app */;
@@ -272,7 +272,7 @@
 			);
 			mainGroup = 707C60D21AFF822100BDAB0B;
 			packageReferences = (
-				8D96D37E252ECD5800DFD5DB /* XCRemoteSwiftPackageReference "PagingMenuController" */,
+				8D96D38C252ED3F400DFD5DB /* XCRemoteSwiftPackageReference "PagingMenuController" */,
 			);
 			productRefGroup = 707C60DC1AFF822100BDAB0B /* Products */;
 			projectDirPath = "";
@@ -607,9 +607,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8D96D37E252ECD5800DFD5DB /* XCRemoteSwiftPackageReference "PagingMenuController" */ = {
+		8D96D38C252ED3F400DFD5DB /* XCRemoteSwiftPackageReference "PagingMenuController" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "file:///Users/lamnd/Projects/Github/PagingMenuController";
+			repositoryURL = "https://github.com/lamnd91/PagingMenuController";
 			requirement = {
 				branch = spm;
 				kind = branch;
@@ -618,14 +618,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8D96D37F252ECD5800DFD5DB /* PagingMenuController */ = {
+		8D96D38D252ED3F400DFD5DB /* PagingMenuController */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8D96D37E252ECD5800DFD5DB /* XCRemoteSwiftPackageReference "PagingMenuController" */;
+			package = 8D96D38C252ED3F400DFD5DB /* XCRemoteSwiftPackageReference "PagingMenuController" */;
 			productName = PagingMenuController;
 		};
-		8D96D381252ECD6200DFD5DB /* PagingMenuController */ = {
+		8D96D38F252ED3FD00DFD5DB /* PagingMenuController */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8D96D37E252ECD5800DFD5DB /* XCRemoteSwiftPackageReference "PagingMenuController" */;
+			package = 8D96D38C252ED3F400DFD5DB /* XCRemoteSwiftPackageReference "PagingMenuController" */;
 			productName = PagingMenuController;
 		};
 /* End XCSwiftPackageProductDependency section */
