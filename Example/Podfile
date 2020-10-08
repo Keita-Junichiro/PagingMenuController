@@ -3,11 +3,11 @@ use_frameworks!
 workspace './PagingMenuControllerDemo.xcworkspace'
 
 target 'PagingMenuControllerDemo' do
-  pod "PagingMenuController", :path => "../"
+#  pod "PagingMenuController", :path => "../"
 end
 
 target 'PagingMenuControllerDemo2' do
-  pod "PagingMenuController", :path => "../"
+#  pod "PagingMenuController", :path => "../"
 end
 
 #post_install do |installer|
