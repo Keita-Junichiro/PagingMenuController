@@ -5,7 +5,7 @@
 //  Created by Yusuke Kita on 5/9/15.
 //  Copyright (c) 2015 kitasuke. All rights reserved.
 //
-
+#if canImport(UIKit)
 import UIKit
 
 open class MenuItemView: UIView {
@@ -302,8 +302,8 @@ extension MenuItemView {
     }
     
     fileprivate func estimatedLabelSize(_ label: UILabel) -> CGSize {
-        guard let text = label.text else { return .zero }
-        return NSString(string: text).boundingRect(with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: label.font], context: nil).size
+        guard let text = label.text, let font = label.font else { return .zero }
+        return NSString(string: text).boundingRect(with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil).size
     }
     
     fileprivate func calculateLabelSize(_ label: UILabel, maxWidth: CGFloat) -> CGSize {
@@ -327,3 +327,4 @@ extension MenuItemView {
         return UIApplication.shared.keyWindow?.bounds.width ?? UIScreen.main.bounds.width
     }
 }
+#endif

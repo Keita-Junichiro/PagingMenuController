@@ -6,6 +6,7 @@
 //  Copyright (c) 2016 kitasuke. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 open class PagingViewController: UIViewController {
@@ -99,7 +100,7 @@ open class PagingViewController: UIViewController {
                     controller.view!.removeFromSuperview()
                     controller.removeFromParent()
                     
-                    let _ = visibleControllers.index(of: controller).flatMap { visibleControllers.remove(at: $0) }
+                    let _ = visibleControllers.firstIndex(of: controller).flatMap { visibleControllers.remove(at: $0) }
                 }
                 continue
             }
@@ -301,3 +302,4 @@ extension PagingViewController {
         return true
     }
 }
+#endif

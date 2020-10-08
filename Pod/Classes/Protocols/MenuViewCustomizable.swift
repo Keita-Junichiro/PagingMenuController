@@ -6,7 +6,8 @@
 //  Copyright (c) 2015 kitasuke. All rights reserved.
 //
 
-import Foundation
+#if canImport(UIKit)
+import UIKit
 
 public protocol MenuViewCustomizable {
     var backgroundColor: UIColor { get }
@@ -86,3 +87,4 @@ public enum MenuPosition {
     case top
     case bottom
 }
+#endif

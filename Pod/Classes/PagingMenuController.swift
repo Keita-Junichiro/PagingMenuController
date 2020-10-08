@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 kitasuke. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 @available(*, unavailable, message: "Please use `onMove` property instead")
@@ -488,7 +489,7 @@ extension PagingMenuController {
     @objc internal func handleTapGesture(_ recognizer: UITapGestureRecognizer) {
         guard let menuItemView = recognizer.view as? MenuItemView,
             let menuView = menuView,
-            let page = menuView.menuItemViews.index(of: menuItemView),
+            let page = menuView.menuItemViews.firstIndex(of: menuItemView),
             page != menuView.currentPage,
             let menuOptions = menuOptions else { return }
         
@@ -598,3 +599,4 @@ extension PagingMenuController {
         NSException(name: NSExceptionName(rawValue: exceptionName), reason: reason, userInfo: nil).raise()
     }
 }
+#endif

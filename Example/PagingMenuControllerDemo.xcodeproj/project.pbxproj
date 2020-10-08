@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,8 @@
 		707C61031AFF843F00BDAB0B /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707C61021AFF843F00BDAB0B /* RepositoriesViewController.swift */; };
 		707C61051AFF845200BDAB0B /* GistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707C61041AFF845200BDAB0B /* GistsViewController.swift */; };
 		707C61071AFF846800BDAB0B /* OrganizationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707C61061AFF846800BDAB0B /* OrganizationsViewController.swift */; };
+		8D96D380252ECD5800DFD5DB /* PagingMenuController in Frameworks */ = {isa = PBXBuildFile; productRef = 8D96D37F252ECD5800DFD5DB /* PagingMenuController */; };
+		8D96D382252ECD6200DFD5DB /* PagingMenuController in Frameworks */ = {isa = PBXBuildFile; productRef = 8D96D381252ECD6200DFD5DB /* PagingMenuController */; };
 		B50B36C1B3DC846362BC2BCC /* Pods_PagingMenuControllerDemo2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7502E520266C60B11B332CB2 /* Pods_PagingMenuControllerDemo2.framework */; };
 		EC0DC7D31D090B1B00857E1F /* PagingMenuControllerOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0DC7D21D090B1B00857E1F /* PagingMenuControllerOptions.swift */; };
 		EC48B6AB1CEC3DD6004C0E3D /* MenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC48B6AA1CEC3DD6004C0E3D /* MenuViewController.storyboard */; };
@@ -84,6 +86,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A4915476E84149DEF5F6C4F /* Pods_PagingMenuControllerDemo.framework in Frameworks */,
+				8D96D380252ECD5800DFD5DB /* PagingMenuController in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +95,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B50B36C1B3DC846362BC2BCC /* Pods_PagingMenuControllerDemo2.framework in Frameworks */,
+				8D96D382252ECD6200DFD5DB /* PagingMenuController in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,13 +208,15 @@
 				707C60D81AFF822100BDAB0B /* Frameworks */,
 				707C60D91AFF822100BDAB0B /* Resources */,
 				70C505481B0058B10007571E /* Embed Frameworks */,
-				8EBB653436FDCF3C48E9A04C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = PagingMenuControllerDemo;
+			packageProductDependencies = (
+				8D96D37F252ECD5800DFD5DB /* PagingMenuController */,
+			);
 			productName = PagingMenuControllerDemo;
 			productReference = 707C60DB1AFF822100BDAB0B /* PagingMenuControllerDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -223,13 +229,15 @@
 				EC7BA3F31B524BB4007FB8A5 /* Sources */,
 				EC7BA3F41B524BB4007FB8A5 /* Frameworks */,
 				EC7BA3F51B524BB4007FB8A5 /* Resources */,
-				229F81CB8BD76DBAF1B4719F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = PagingMenuControllerDemo2;
+			packageProductDependencies = (
+				8D96D381252ECD6200DFD5DB /* PagingMenuController */,
+			);
 			productName = PagingMenuControllerDemo2;
 			productReference = EC7BA3F71B524BB4007FB8A5 /* PagingMenuControllerDemo2.app */;
 			productType = "com.apple.product-type.application";
@@ -263,6 +271,9 @@
 				Base,
 			);
 			mainGroup = 707C60D21AFF822100BDAB0B;
+			packageReferences = (
+				8D96D37E252ECD5800DFD5DB /* XCRemoteSwiftPackageReference "PagingMenuController" */,
+			);
 			productRefGroup = 707C60DC1AFF822100BDAB0B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -298,24 +309,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		229F81CB8BD76DBAF1B4719F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PagingMenuControllerDemo2/Pods-PagingMenuControllerDemo2-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/PagingMenuController/PagingMenuController.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PagingMenuController.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PagingMenuControllerDemo2/Pods-PagingMenuControllerDemo2-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		57D5C21541759D87796E93F9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -350,24 +343,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8EBB653436FDCF3C48E9A04C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PagingMenuControllerDemo/Pods-PagingMenuControllerDemo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/PagingMenuController/PagingMenuController.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PagingMenuController.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PagingMenuControllerDemo/Pods-PagingMenuControllerDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -512,7 +487,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -526,7 +502,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PagingMenuControllerDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kitasuke.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -542,7 +521,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PagingMenuControllerDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kitasuke.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -562,7 +544,10 @@
 				);
 				INFOPLIST_FILE = PagingMenuControllerDemo2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yusuke.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -578,7 +563,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PagingMenuControllerDemo2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yusuke.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -617,6 +605,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8D96D37E252ECD5800DFD5DB /* XCRemoteSwiftPackageReference "PagingMenuController" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "file:///Users/lamnd/Projects/Github/PagingMenuController";
+			requirement = {
+				branch = spm;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8D96D37F252ECD5800DFD5DB /* PagingMenuController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D96D37E252ECD5800DFD5DB /* XCRemoteSwiftPackageReference "PagingMenuController" */;
+			productName = PagingMenuController;
+		};
+		8D96D381252ECD6200DFD5DB /* PagingMenuController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D96D37E252ECD5800DFD5DB /* XCRemoteSwiftPackageReference "PagingMenuController" */;
+			productName = PagingMenuController;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 707C60D31AFF822100BDAB0B /* Project object */;
 }

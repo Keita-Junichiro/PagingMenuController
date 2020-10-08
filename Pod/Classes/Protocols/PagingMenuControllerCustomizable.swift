@@ -6,7 +6,8 @@
 //  Copyright (c) 2015 kitasuke. All rights reserved.
 //
 
-import Foundation
+#if canImport(UIKit)
+import UIKit
 
 public protocol PagingMenuControllerCustomizable {
     var defaultPage: Int { get }
@@ -55,3 +56,4 @@ public enum ComponentType {
     case pagingController(pagingControllers: [UIViewController])
     case all(menuOptions: MenuViewCustomizable, pagingControllers: [UIViewController])
 }
+#endif

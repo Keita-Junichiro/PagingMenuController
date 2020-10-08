@@ -6,7 +6,8 @@
 //  Copyright (c) 2015 kitasuke. All rights reserved.
 //
 
-import Foundation
+#if canImport(UIKit)
+import UIKit
 
 public protocol MenuItemViewCustomizable {
     var horizontalMargin: CGFloat { get }
@@ -49,3 +50,4 @@ public struct MenuItemText {
         self.selectedFont = selectedFont
     }
 }
+#endif

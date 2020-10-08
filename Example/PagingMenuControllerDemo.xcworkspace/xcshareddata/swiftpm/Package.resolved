@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "PagingMenuController",
+        "repositoryURL": "/Users/lamnd/Projects/Github/PagingMenuController",
+        "state": {
+          "branch": "spm",
+          "revision": "f9533938908341a6f5818a8866b9dd438e26ac76",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

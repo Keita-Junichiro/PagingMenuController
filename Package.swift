@@ -22,8 +22,5 @@ let package = Package(
         .target(
             name: "PagingMenuController",
             dependencies: [], path: "Pod/Classes"),
-        .testTarget(
-            name: "PagingMenuControllerTests",
-            dependencies: ["PagingMenuController"]),
     ]
 )
